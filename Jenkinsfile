@@ -212,6 +212,3 @@ def deployBuild(sagHome, deployerHome, projectName, depCanName, deployerHost,dep
 	-user $deployerUser \
 	-pwd $deployerPassword"
 }
-
-
-
