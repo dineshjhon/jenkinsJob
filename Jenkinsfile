@@ -180,10 +180,10 @@ def createBuild(sagHome, abeHome, buildVersion, jenkinsWS, sourcePath, buildPath
 }
 
 def createProject(sagHome,jenkinsWS,projectAutomatorFile,projectAutomatorTemplate,deployerHome,deployerHost,deployerPort,deployerUser,deployerPassword,depProjectName,depSetName,depMapName,depCanName,depRepoName,depRepoPath,targetAlias,targetHost,targetPort,targetUser,targetPassword,targetVersion) {
-	bat "$sagHome/common/lib/ant/bin/ant -file $jenkinsWS/sgt-tools/templates/build.xml createProjectReposiotry \
+	bat "$sagHome/common/lib/ant/bin/ant -file $jenkinsWS/jenkins/templates/build.xml createProjectReposiotry \
 	-Dsag.install.dir=$sagHome \
-	-Dautomator.file=$jenkinsWS/sgt-tools/templates/$projectAutomatorFile \
-	-Dautomator.file.tpl=$jenkinsWS/sgt-tools/templates/$projectAutomatorTemplate \
+	-Dautomator.file=$jenkinsWS/jenkins/templates/$projectAutomatorFile \
+	-Dautomator.file.tpl=$jenkinsWS/jenkins/templates/$projectAutomatorTemplate \
 	-Ddeployer.home=$sagHome/$deployerHome \
 	-Ddeployer.host=$deployerHost \
 	-Ddeployer.port=$deployerPort \
